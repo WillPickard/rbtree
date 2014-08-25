@@ -1,0 +1,33 @@
+Will Pickard
+CS 2720
+Project 2
+Shelby Funk
+07/30/2014
+
+To implement the RB tree, I use two classes:
+1) RBTree
+2) TreeNode
+
+Both of these are templated classes
+Overloaded Comparision operators are located in TreeNode.h
+
+I did not include a tree as ann argument in any of the RBTree classes. This is because the tree is built using the tree node class. 
+The tree node class maintains pointers to its left and right children as well as its parent
+it also maintains a color (RED || BLACK) 
+
+No keys are necessary here because the tree node must be instantiated with a key.
+To do this simply call TreeNode<T>(T data)
+	-T is the template class: for example: int
+	-Data is the actual value
+	-Example:
+		-if you want to create a node with 65 as the key the proper syntax is: TreeNode<int>(65);
+		-this node can then be inserted into an instantiated tree
+
+The delete function takes just a key and uses a helper method called deleteLookUp which returns the node to delete if the key exists in the tree
+if the key does not exist in the tree then this method will return nil
+
+insert takes just a key and creates a new node 
+
+all extra credit has been completed
+
+
